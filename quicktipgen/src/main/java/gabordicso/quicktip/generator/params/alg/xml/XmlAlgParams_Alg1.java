@@ -1,7 +1,9 @@
 package gabordicso.quicktip.generator.params.alg.xml;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class XmlAlgParams_Alg1 extends XmlAlgParamsBase {
 	private int range;
 
