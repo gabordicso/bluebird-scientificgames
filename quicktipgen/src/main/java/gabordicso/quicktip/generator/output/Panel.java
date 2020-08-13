@@ -4,16 +4,16 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Panel {
-	private final Set<Integer> checkedNumbers = new TreeSet<>();
+	private final Set<Integer> drawnNumbers = new TreeSet<>();
 
-	public Set<Integer> getCheckedNumbers() {
-		return checkedNumbers;
+	public Set<Integer> getDrawnNumbers() {
+		return drawnNumbers;
 	}
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		boolean first = true;
-		for (Integer i : checkedNumbers) {
+		for (Integer i : drawnNumbers) {
 			if (first) {
 				first = false;
 			} else {

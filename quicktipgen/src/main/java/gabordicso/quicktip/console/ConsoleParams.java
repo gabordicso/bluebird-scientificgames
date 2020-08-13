@@ -41,4 +41,21 @@ public class ConsoleParams {
 	public boolean getAllowOverlappingSheets() {
 		return allowOverlappingSheets;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("ConsoleParams [algType=");
+		builder.append(algType);
+		builder.append(", sheetCount=");
+		builder.append(sheetCount);
+		builder.append(", inputFilePath=");
+		builder.append(inputFilePath);
+		builder.append(", allowOverlappingSheets=");
+		builder.append(allowOverlappingSheets);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
 }

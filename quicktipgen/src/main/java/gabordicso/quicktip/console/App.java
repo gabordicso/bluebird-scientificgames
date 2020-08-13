@@ -10,8 +10,6 @@ import gabordicso.quicktip.generator.params.InvalidParamException;
 public class App
 {
 	/* TODO
-	 * include input params when printing generated quick tip
-	 * implement generator logic
 	 * test XML parsing
 	 * implement JUnit tests
 	 * add test xmls (valid and invalid)
@@ -24,6 +22,7 @@ public class App
 		try {
 			ConsoleArgParser parser = new ConsoleArgParser();
 		    ConsoleParams consoleParams = parser.parseArgs(args);
+		    System.out.println(String.format("Parsed console parameters: ", consoleParams));
 		    QuickTipGenerator generator = QuickTipGeneratorFactory.create(consoleParams);
 		    QuickTip tip = generator.generate();
 		    System.out.println(String.format("Generated Quick Tip:\n%s", tip.toString()));

@@ -7,11 +7,15 @@ import gabordicso.quicktip.generator.params.alg.QuickTipAlgParams;
 import gabordicso.quicktip.generator.params.alg.QuickTipAlgParamsFactory;
 
 public class QuickTipGeneratorFactory {
-	public static QuickTipGenerator create(ConsoleParams consoleParams) throws InvalidParamException {
+	public static QuickTipGenerator create(final ConsoleParams consoleParams) throws InvalidParamException {
 		final int sheetCount = consoleParams.getSheetCount();
 		final boolean allowOverlappingSheets = consoleParams.getAllowOverlappingSheets();
 		final QuickTipAlgParams algParams = QuickTipAlgParamsFactory.create(consoleParams);
 	    QuickTipGeneratorParams params = new QuickTipGeneratorParams(sheetCount, allowOverlappingSheets, algParams);
+		return create(params);
+	}
+	
+	public static QuickTipGenerator create(final QuickTipGeneratorParams params) {
 		return new QuickTipGenerator(params);
 	}
 

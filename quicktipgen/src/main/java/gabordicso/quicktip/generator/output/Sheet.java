@@ -23,4 +23,17 @@ public class Sheet {
 		return sb.toString();
 	}
 
+	public boolean containsPanel(Panel panel) {
+		if (panel != null) {
+			String panelStr = panel.toString();
+			for (Panel currentPanel : panels) {
+				String currentPanelStr = currentPanel.toString();
+				if (currentPanelStr == panelStr) {
+					return true;
+				}
+			}
+		}
+		
+		return false;
+	}
 }
