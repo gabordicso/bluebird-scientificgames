@@ -24,9 +24,9 @@ public class QuickTip {
 		sb.append("\nGenerated Sheets:\n");
 		int currentSheet = 1;
 		for (Sheet sheet : sheets) {
-			sb.append("Sheet ")
+			sb.append("\n=== Sheet ")
 				.append(currentSheet)
-				.append(":\n")
+				.append(" ===\n\n")
 				.append(sheet);
 			currentSheet++;
 		}

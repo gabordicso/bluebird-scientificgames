@@ -17,7 +17,8 @@ public class Sheet {
 			sb.append("Panel ")
 				.append(currentPanel)
 				.append(": ")
-				.append(panel);
+				.append(panel)
+				.append("\n");
 			currentPanel++;
 		}
 		return sb.toString();

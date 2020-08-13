@@ -44,7 +44,7 @@ public class QuickTipGeneratorParams {
 		if (algParams == null) {
 			sb.append("null");
 		} else {
-			sb.append("[ numbersToDraw=");
+			sb.append("[numbersToDraw=");
 			sb.append(algParams.getNumbersToDraw());
 			sb.append(", panelCount=");
 			sb.append(algParams.getPanelCount());
