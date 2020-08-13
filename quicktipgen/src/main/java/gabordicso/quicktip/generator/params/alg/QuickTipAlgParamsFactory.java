@@ -1,4 +1,4 @@
-package gabordicso.quicktip.algparams;
+package gabordicso.quicktip.generator.params.alg;
 
 import java.io.File;
 import java.security.InvalidParameterException;
@@ -7,12 +7,12 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import gabordicso.ConsoleParams;
-import gabordicso.InvalidParamException;
-import gabordicso.quicktip.algparams.xml.XmlAlgParamsBase;
-import gabordicso.quicktip.algparams.xml.XmlAlgParams_Alg1;
-import gabordicso.quicktip.algparams.xml.XmlAlgParams_Alg2;
-import gabordicso.quicktip.algparams.xml.XmlAlgParams_Alg3;
+import gabordicso.quicktip.console.ConsoleParams;
+import gabordicso.quicktip.generator.params.InvalidParamException;
+import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParamsBase;
+import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParams_Alg1;
+import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParams_Alg2;
+import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParams_Alg3;
 
 public class QuickTipAlgParamsFactory {
 	

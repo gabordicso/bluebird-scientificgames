@@ -1,4 +1,4 @@
-package gabordicso.quicktip.algparams.xml;
+package gabordicso.quicktip.generator.params.alg.xml;
 
 import javax.xml.bind.annotation.XmlElement;
 

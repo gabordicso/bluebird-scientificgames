@@ -1,4 +1,4 @@
-package gabordicso;
+package gabordicso.quicktip.generator.params;
 
 public class InvalidParamException extends Exception {
 	private static final long serialVersionUID = -5993637439531546170L;

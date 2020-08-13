@@ -1,4 +1,4 @@
-package gabordicso;
+package gabordicso.quicktip.console;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -6,7 +6,8 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import gabordicso.quicktip.algparams.AlgType;
+import gabordicso.quicktip.generator.params.InvalidParamException;
+import gabordicso.quicktip.generator.params.alg.AlgType;
 
 public class ConsoleArgParser {
 	enum ParamNames {

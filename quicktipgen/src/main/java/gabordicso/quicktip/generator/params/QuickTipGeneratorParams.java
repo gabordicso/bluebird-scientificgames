@@ -1,6 +1,6 @@
-package gabordicso.quicktip.generator;
+package gabordicso.quicktip.generator.params;
 
-import gabordicso.quicktip.algparams.QuickTipAlgParams;
+import gabordicso.quicktip.generator.params.alg.QuickTipAlgParams;
 
 public class QuickTipGeneratorParams {
 

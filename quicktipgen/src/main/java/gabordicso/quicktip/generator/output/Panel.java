@@ -1,4 +1,4 @@
-package gabordicso.quicktip;
+package gabordicso.quicktip.generator.output;
 
 import java.util.Set;
 import java.util.TreeSet;

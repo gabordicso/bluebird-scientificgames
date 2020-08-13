@@ -4,6 +4,10 @@ import org.apache.commons.cli.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
+import gabordicso.quicktip.console.ConsoleArgParser;
+import gabordicso.quicktip.console.ConsoleParams;
+import gabordicso.quicktip.generator.params.InvalidParamException;
+
 public class AppTest 
 {
 	/*

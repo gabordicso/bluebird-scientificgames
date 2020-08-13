@@ -1,6 +1,7 @@
-package gabordicso;
+package gabordicso.quicktip.console;
 
-import gabordicso.quicktip.algparams.AlgType;
+import gabordicso.quicktip.generator.params.InvalidParamException;
+import gabordicso.quicktip.generator.params.alg.AlgType;
 
 public class ConsoleParams {
 	

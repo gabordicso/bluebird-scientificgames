@@ -1,4 +1,4 @@
-package gabordicso.quicktip.algparams;
+package gabordicso.quicktip.generator.params.alg;
 
 public interface QuickTipAlgParams {
 	public int getNumbersToDraw();

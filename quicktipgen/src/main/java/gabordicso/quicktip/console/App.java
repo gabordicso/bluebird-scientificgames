@@ -1,13 +1,23 @@
-package gabordicso;
+package gabordicso.quicktip.console;
 
 import org.apache.commons.cli.ParseException;
 
-import gabordicso.quicktip.QuickTip;
 import gabordicso.quicktip.generator.QuickTipGenerator;
 import gabordicso.quicktip.generator.QuickTipGeneratorFactory;
+import gabordicso.quicktip.generator.output.QuickTip;
+import gabordicso.quicktip.generator.params.InvalidParamException;
 
 public class App
 {
+	/* TODO
+	 * include input params when printing generated quick tip
+	 * implement generator logic
+	 * test XML parsing
+	 * implement JUnit tests
+	 * add test xmls (valid and invalid)
+	 * perform manual tests
+	 * update README.md with install and usage instructions, including sample uses for valid and invalid cases
+	 */
 
 	public static void main(final String[] args)
     {

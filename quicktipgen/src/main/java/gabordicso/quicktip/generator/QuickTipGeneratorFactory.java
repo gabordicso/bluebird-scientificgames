@@ -1,9 +1,10 @@
 package gabordicso.quicktip.generator;
 
-import gabordicso.ConsoleParams;
-import gabordicso.InvalidParamException;
-import gabordicso.quicktip.algparams.QuickTipAlgParams;
-import gabordicso.quicktip.algparams.QuickTipAlgParamsFactory;
+import gabordicso.quicktip.console.ConsoleParams;
+import gabordicso.quicktip.generator.params.InvalidParamException;
+import gabordicso.quicktip.generator.params.QuickTipGeneratorParams;
+import gabordicso.quicktip.generator.params.alg.QuickTipAlgParams;
+import gabordicso.quicktip.generator.params.alg.QuickTipAlgParamsFactory;
 
 public class QuickTipGeneratorFactory {
 	public static QuickTipGenerator create(ConsoleParams consoleParams) throws InvalidParamException {
