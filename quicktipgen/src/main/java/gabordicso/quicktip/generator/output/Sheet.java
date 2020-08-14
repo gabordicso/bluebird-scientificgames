@@ -16,9 +16,9 @@ public class Sheet {
 		for (Panel panel : panels) {
 			sb.append("Panel ")
 				.append(currentPanel)
-				.append(": ")
+				.append(": [")
 				.append(panel)
-				.append("\n");
+				.append("]\n");
 			currentPanel++;
 		}
 		return sb.toString();

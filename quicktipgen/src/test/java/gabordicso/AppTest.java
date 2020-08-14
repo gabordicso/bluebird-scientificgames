@@ -68,7 +68,7 @@ public class AppTest {
 		}
 	}
 	
-    @Test
+//    @Test
     public void test() {
     	ConsoleArgParser parser = new ConsoleArgParser();
 		String[] args = new String[]{ "--algType=3", "-i=src\\test\\resources\\test_alg3_invalid3.xml", "-s=100" };
@@ -85,7 +85,7 @@ public class AppTest {
 		}
     }
     
-    @Test
+//    @Test
     public void test2() {
     	QuickTipAlgParams algParams = new TestQuickTipAlgParams(5, 2, 90);
 		QuickTipGeneratorParams params = new QuickTipGeneratorParams(10, false, algParams);
@@ -97,7 +97,7 @@ public class AppTest {
 		}
     }
     
-    @Test
+//    @Test
     public void test3() {
     	QuickTipAlgParams algParams = new TestQuickTipAlgParams(5, 2, 6);
 		QuickTipGeneratorParams params = new QuickTipGeneratorParams(10, true, algParams);
