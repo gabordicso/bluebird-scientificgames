@@ -8,11 +8,6 @@ import gabordicso.quicktip.generator.output.QuickTip;
 import gabordicso.quicktip.generator.params.InvalidParamException;
 
 public class App {
-	/* TODO
-	 * update README.md with install and usage instructions, including sample uses for valid and invalid cases, warn about extremely long running time when providing unusually big values for sheet and panel count
-	 * implement JUnit tests
-	 */
-
 	public static void main(final String[] args)
     {
 		try {

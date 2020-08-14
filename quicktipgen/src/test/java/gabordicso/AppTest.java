@@ -24,7 +24,9 @@ import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParams_Alg3;
 
 public class AppTest {
 	/*
-	 * TODO test cases for parsing command line arguments:
+	 * TODO implement test cases
+	 * 
+	 * test cases for parsing command line arguments:
 	 * - missing arg
 	 * -- arg and value both missing
 	 * -- arg specified with no value (e.g. "--inputFilePath= ")
@@ -85,7 +87,7 @@ public class AppTest {
 		}
     }
     
-//    @Test
+    @Test
     public void test2() {
     	QuickTipAlgParams algParams = new TestQuickTipAlgParams(5, 2, 90);
 		QuickTipGeneratorParams params = new QuickTipGeneratorParams(10, false, algParams);
