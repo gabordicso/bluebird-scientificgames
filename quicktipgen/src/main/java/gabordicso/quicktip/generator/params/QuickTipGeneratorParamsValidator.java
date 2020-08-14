@@ -55,7 +55,7 @@ public class QuickTipGeneratorParamsValidator {
 		int range = params.getRange();
 		int numbersToDraw = params.getNumbersToDraw();
 		int panelCount = params.getPanelCount();
-		int possibleCombinations = getPossibleCombinations(range, numbersToDraw);
+		long possibleCombinations = getPossibleCombinations(range, numbersToDraw);
 		if (panelCount > possibleCombinations) {
 			throw new InvalidParameterException(String.format("Can not generate the requested number of unique panels on one sheet with these parameters: range = %d, numbers to draw = %d, panel count = %d, number of possible combinations = %d", range, numbersToDraw, panelCount, possibleCombinations));
 		}
@@ -65,16 +65,17 @@ public class QuickTipGeneratorParamsValidator {
 		int range = params.getRange();
 		int numbersToDraw = params.getNumbersToDraw();
 		int panelCount = params.getPanelCount();
-		int possibleCombinations = getPossibleCombinations(range, numbersToDraw);
-		if (panelCount * sheetCount > possibleCombinations) {
+		long overallPanelCount = panelCount * sheetCount;
+		long possibleCombinations = getPossibleCombinations(range, numbersToDraw);
+		if (overallPanelCount > possibleCombinations) {
 			throw new InvalidParameterException(String.format("Can not generate the requested number of sheets all containing unique panels with these parameters: range = %d, numbers to draw = %d, panel count = %d, sheet count = %d, number of possible combinations = %d", range, numbersToDraw, panelCount, sheetCount, possibleCombinations));
 		}
 	}
 
-	private int getPossibleCombinations(final int range, final int numbersToDraw) {
+	private long getPossibleCombinations(final int range, final int numbersToDraw) {
 		final int start = range;
 		final int stop = range - numbersToDraw + 1;
-		int combinations = 1;
+		long combinations = 1;
 		for (int i = start; i >= stop; i--) {
 			combinations *= i;
 		}
