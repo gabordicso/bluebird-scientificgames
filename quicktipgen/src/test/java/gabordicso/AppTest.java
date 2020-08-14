@@ -1,5 +1,11 @@
 package gabordicso;
 
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
 import org.apache.commons.cli.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,9 +17,12 @@ import gabordicso.quicktip.generator.QuickTipGeneratorFactory;
 import gabordicso.quicktip.generator.params.InvalidParamException;
 import gabordicso.quicktip.generator.params.QuickTipGeneratorParams;
 import gabordicso.quicktip.generator.params.alg.QuickTipAlgParams;
+import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParamsBase;
+import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParams_Alg1;
+import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParams_Alg2;
+import gabordicso.quicktip.generator.params.alg.xml.XmlAlgParams_Alg3;
 
-public class AppTest 
-{
+public class AppTest {
 	/*
 	 * TODO test cases for parsing command line arguments:
 	 * - missing arg
@@ -62,10 +71,11 @@ public class AppTest
     @Test
     public void test() {
     	ConsoleArgParser parser = new ConsoleArgParser();
-		String[] args = new String[]{ "--algType=1", "-i=0", "-s=1" };
+		String[] args = new String[]{ "--algType=3", "-i=src\\test\\resources\\test_alg3_invalid3.xml", "-s=100" };
     	try {
     		ConsoleParams params = parser.parseArgs(args);
-    		System.out.println(params.getAlgType());
+    		QuickTipGenerator gen = QuickTipGeneratorFactory.create(params);
+			System.out.println(gen.generate());
 		} catch (ParseException e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -97,5 +107,43 @@ public class AppTest
 		} catch (InvalidParamException e) {
 			e.printStackTrace();
 		}
+    }
+    
+    private <T extends XmlAlgParamsBase> void createXml(final T xmlParams, final String fileName, final Class<T> paramsClass) {
+		try {
+			File file = new File(fileName);
+			JAXBContext jaxbContext = JAXBContext.newInstance(paramsClass);
+			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			jaxbMarshaller.marshal(xmlParams, file);
+			jaxbMarshaller.marshal(xmlParams, System.out);
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}
+    }
+    
+//    @Test
+	public void createAlg1Xml() {
+		XmlAlgParams_Alg1 xmlParams = new XmlAlgParams_Alg1();
+		xmlParams.setNumbersToDraw(5);
+		xmlParams.setRange(90);
+		createXml(xmlParams, "test_alg1.xml", XmlAlgParams_Alg1.class);
+    }
+    
+//    @Test
+	public void createAlg2Xml() {
+		XmlAlgParams_Alg2 xmlParams = new XmlAlgParams_Alg2();
+		xmlParams.setNumbersToDraw(5);
+		xmlParams.setPanelCount(6);
+		createXml(xmlParams, "test_alg2.xml", XmlAlgParams_Alg2.class);
+    }
+    
+//    @Test
+	public void createAlg3Xml() {
+		XmlAlgParams_Alg3 xmlParams = new XmlAlgParams_Alg3();
+		xmlParams.setNumbersToDraw(5);
+		xmlParams.setPanelCount(6);
+		xmlParams.setRange(90);
+		createXml(xmlParams, "test_alg3.xml", XmlAlgParams_Alg3.class);
     }
 }

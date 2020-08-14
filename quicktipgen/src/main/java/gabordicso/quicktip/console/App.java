@@ -7,14 +7,11 @@ import gabordicso.quicktip.generator.QuickTipGeneratorFactory;
 import gabordicso.quicktip.generator.output.QuickTip;
 import gabordicso.quicktip.generator.params.InvalidParamException;
 
-public class App
-{
+public class App {
 	/* TODO
-	 * test XML parsing
+	 * perform manual tests from console
 	 * implement JUnit tests
-	 * add test xmls (valid and invalid)
-	 * perform manual tests
-	 * update README.md with install and usage instructions, including sample uses for valid and invalid cases
+	 * update README.md with install and usage instructions, including sample uses for valid and invalid cases, warn about extremely long running time when providing unusually big values for sheet and panel count
 	 */
 
 	public static void main(final String[] args)
