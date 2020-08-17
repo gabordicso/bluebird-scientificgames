@@ -29,7 +29,7 @@ public class Sheet {
 			String panelStr = panel.toString();
 			for (Panel currentPanel : panels) {
 				String currentPanelStr = currentPanel.toString();
-				if (currentPanelStr == panelStr) {
+				if (currentPanelStr.equals(panelStr)) {
 					return true;
 				}
 			}
